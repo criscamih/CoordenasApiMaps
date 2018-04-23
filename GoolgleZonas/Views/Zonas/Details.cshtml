@@ -1,0 +1,74 @@
+﻿@model GoolgleZonas.Models.Zona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Zona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreZona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreZona)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Radio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Radio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHoraCreado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHoraCreado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CodZona }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

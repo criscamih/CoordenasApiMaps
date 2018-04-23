@@ -1,0 +1,55 @@
+﻿@model IEnumerable<GoolgleZonas.ModelosQuerys.Lista>
+@{
+    ViewBag.Title = "Lista de Zonas";
+}
+
+<h2>Lista de Rutas</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreZona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Radio)
+        </th>
+      
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreZona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latitud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Longitud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Radio)
+            </td>
+            
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.CodZona }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.CodZona })
+            </td>
+        </tr>
+    }
+
+</table>
