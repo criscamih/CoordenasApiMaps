@@ -16,34 +16,34 @@ namespace GoolgleZonas.Controllers
         // GET: Listas
         public ActionResult Index()
         {
-            List<Lista> lista = new List<Lista>();
-            var query = from z in db.Zona
-                        select new
-                        {
-                            z.CodZona,
-                            z.NombreZona,
-                            z.Descripcion,
-                            z.Latitud,
-                            z.Longitud,
-                            z.Radio,
-                            z.FechaHoraCreado,
-                            z.CodUsuario
-                        };
-            foreach (var item in query)
-            {
-                lista.Add(new Lista
-                {
-                   CodZona=item.CodZona,
-                   NombreZona=item.NombreZona,
-                   Descripcion=item.Descripcion,
-                   Latitud=item.Latitud,
-                   Longitud=item.Longitud,
-                   Radio=item.Radio,
-                   FechaHoraCreado=item.FechaHoraCreado,
-                   CodUsuario=item.CodUsuario
-                });
-            }
-            return View(lista);
+            //List<Lista> lista = new List<Lista>();
+            //var query = from z in db.Zona
+            //            select new
+            //            {
+            //                z.CodZona,
+            //                z.NombreZona,
+            //                z.Descripcion,
+            //                z.Latitud,
+            //                z.Longitud,
+            //                z.Radio,
+            //                z.FechaHoraCreado,
+            //                z.CodUsuario
+            //            };
+            //foreach (var item in query)
+            //{
+            //    lista.Add(new Lista
+            //    {
+            //       CodZona=item.CodZona,
+            //       NombreZona=item.NombreZona,
+            //       Descripcion=item.Descripcion,
+            //       Latitud=item.Latitud,
+            //       Longitud=item.Longitud,
+            //       Radio=item.Radio,
+            //       FechaHoraCreado=item.FechaHoraCreado,
+            //       CodUsuario=item.CodUsuario
+            //    });
+            //}
+            return View(db.Zona.ToList());
         }
         public ActionResult Editar(int? id)
         {

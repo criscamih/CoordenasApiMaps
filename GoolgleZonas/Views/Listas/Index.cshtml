@@ -46,8 +46,8 @@
             </td>
             
             <td>
-                @Html.ActionLink("Editar", "Editar", new { id = item.CodZona }) |
-                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.CodZona })
+                @Html.ActionLink("Editar", "Editar", new { id = item.CodZona }, new { @class = "btn-sm btn-primary", type = "button" }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.CodZona}, new { @class = "btn-sm btn-danger", type = "button" })
             </td>
         </tr>
     }
